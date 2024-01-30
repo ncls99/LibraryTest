@@ -1,4 +1,5 @@
-﻿.Container-home {
+﻿.Create-book-container {
+    margin-top:auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -6,9 +7,10 @@
     gap: 20px;
     background: rgba(92,39,250,1);
     padding-bottom: 30px;
+    margin-top: 100px;
 }
 
-.Card-item {
+.Form-container {
     width: 500px;
     display: flex;
     flex-direction: row;
@@ -18,14 +20,18 @@
     border-radius: 25px;
     padding: 15px;
     background-color: #F9F7F5;
+    gap: 30px;
 }
 
-    .Card-item h4 {
-        text-align:center;
-    
-    }
+.form-group {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
 
-.a-home {
+}
+
+.btn-submit {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,7 +43,22 @@
     transition: .3s ease-in;
 }
 
-    .a-home:hover {
+    .btn-submit:hover {
         border: solid white 2px;
         background-color: #5C27FA;
     }
+
+.form-input {
+    background: #f9fbfc;
+    border-radius: 2px;
+    border: solid black 2px;
+    margin: 0 24px;
+    height: 40px;
+    width: 160px;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    color: #1e1e1f;
+    box-shadow: 0px 5px 50px 0px rgba(32, 35, 41, 0.25);
+}

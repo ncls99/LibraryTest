@@ -7,6 +7,9 @@
     font-family: 'Rubik', sans-serif;
 }
 
+html {
+    background: rgba(92,39,250,1);
+}
 a {
 text-decoration: none;
 }

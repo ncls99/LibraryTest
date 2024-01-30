@@ -1,37 +1,18 @@
-﻿
-    @model IEnumerable<LibraryTest.Models.Author>
+﻿@model IEnumerable<LibraryTest.Models.Author>
+<link rel="stylesheet" href="~/css/Author.css" asp-append-version="true" />
+
 @{
 
-    <h1>Author list</h1>
 
-    <p>
-        <a asp-action="Create">Create new Author</a>
-    </p>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AuthorId)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
+    <div class="Container-author">
+        <h1>Author list</h1>
+        <a class="a-create-author" asp-action="Create">Create new author</a>
+        @foreach (var item in Model)
         {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AuthorId)
-                    </td>
-                </tr>
+            <div class="Card-item">
+                <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
+                <h4>@Html.DisplayFor(modelItem => item.AuthorId)</h4>
+            </div>
         }
-        </tbody>
-    </table>
+    </div>
 }

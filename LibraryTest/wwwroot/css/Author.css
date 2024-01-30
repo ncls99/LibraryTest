@@ -1,4 +1,4 @@
-﻿.Container-home {
+﻿.Container-author {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -21,11 +21,10 @@
 }
 
     .Card-item h4 {
-        text-align:center;
-    
+        text-align: center;
     }
 
-.a-home {
+.a-create-author {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,7 +36,7 @@
     transition: .3s ease-in;
 }
 
-    .a-home:hover {
+    .a-create-author:hover {
         border: solid white 2px;
         background-color: #5C27FA;
     }

@@ -1,39 +1,18 @@
-﻿@model IEnumerable<LibraryTest.Models.Book>
-
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="~/css/Book.css" asp-append-version="true" />
+@model IEnumerable<LibraryTest.Models.Book>
 
-<h1>Books list</h1>
 
-<p>
-    <a asp-action="Create">Create new Book</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author.Name)
-            </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.BookId">Details</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="Container-home">
+    <h1>Books list</h1>
+    <a class="a-home" asp-action="Create">Create new Book</a>
+    @foreach (var item in Model)
+    {
+        <div class="Card-item">
+            <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
+            <h4>@Html.DisplayFor(modelItem => item.Author.Name)</h4>
+        </div>
+    }
+</div>

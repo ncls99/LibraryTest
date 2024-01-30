@@ -7,49 +7,13 @@
 
 <div class="Container-home">
     <h1>Welcome to Library</h1>
-@*     <div class="Titles-container">
-        <h2>Titulo</h2>
-        <h2>Autor</h2>
-    </div> *@
     @foreach(var item in Model)
     {
         <div class="Card-item">
             <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
-            <h4>@Html.DisplayFor(modelItem => item.Author)</h4>
-            <a class="a-details" asp-action="Details" asp-route-id="@item.BookId">Details</a>
+            <h4>@Html.DisplayFor(modelItem => item.Author.Name)</h4>
         </div>
     }
-
-@*     <table class="table">
-        <thead class="Row-title">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Author)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
-                <tr class="Row-item">
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Author.Name)
-                    </td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@item.BookId">Details</a>
-                    </td>
-                </tr>
-            }
-        </tbody> 
-    </table>*@
-
     <a class="a-home" href="~/Author">Manage Authors</a>
     <a class="a-home" href="~/Book"> Manage Books</a>
 </div>
