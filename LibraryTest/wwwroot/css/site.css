@@ -1,22 +1,46 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+a {
+text-decoration: none;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+li {
+    list-style: none;
+}
+.navBar {
+    display: flex;
+    background-color: #5C27FA;
+    opacity: 100%;
+    color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+    .navBar a {
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        list-style: none;
+        color: white;
+        background-color: #002BB7;
+        transition: .3s ease-in;
+    }
 
-body {
-  margin-bottom: 60px;
-}
+        .navBar a:hover {
+            border: solid white 2px;
+            background-color: #5C27FA;
+        }
+
+

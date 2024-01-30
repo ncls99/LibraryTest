@@ -1,0 +1,65 @@
+﻿.Container-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    background: rgba(92,39,250,1);
+    padding-bottom: 30px;
+}
+
+.Titles-container {
+    width: 500px;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Card-item {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: solid black 2px;
+    border-radius: 25px;
+    padding: 15px;
+    background-color: #F9F7F5;
+}
+
+.a-details {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    background-color: #002BB7;
+    transition: .3s ease-in;
+}
+
+.a-details:hover {
+    border: solid black 2px;
+    background-color: #5C27FA;
+    color: black;
+}
+
+
+.a-home {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    background-color: #002BB7;
+    transition: .3s ease-in;
+}
+
+    .a-home:hover {
+        border: solid white 2px;
+        background-color: #5C27FA;
+    }

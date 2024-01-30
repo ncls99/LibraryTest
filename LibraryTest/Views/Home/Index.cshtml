@@ -2,11 +2,26 @@
     ViewData["Title"] = "Home Page";
 }
 @model IEnumerable<LibraryTest.Models.Book>
+<link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
 
-<div class="text-center">
+
+<div class="Container-home">
     <h1>Welcome to Library</h1>
-    <table class="table">
-        <thead>
+@*     <div class="Titles-container">
+        <h2>Titulo</h2>
+        <h2>Autor</h2>
+    </div> *@
+    @foreach(var item in Model)
+    {
+        <div class="Card-item">
+            <h4>@Html.DisplayFor(modelItem => item.Title)</h4>
+            <h4>@Html.DisplayFor(modelItem => item.Author)</h4>
+            <a class="a-details" asp-action="Details" asp-route-id="@item.BookId">Details</a>
+        </div>
+    }
+
+@*     <table class="table">
+        <thead class="Row-title">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Title)
@@ -20,7 +35,7 @@
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
+                <tr class="Row-item">
                     <td>
                         @Html.DisplayFor(modelItem => item.Title)
                     </td>
@@ -32,9 +47,9 @@
                     </td>
                 </tr>
             }
-        </tbody>
-    </table>
+        </tbody> 
+    </table>*@
 
-    <a href="~/Author">Manage Authors</a>
-    <a href="~/Book"> Manage Books</a>
+    <a class="a-home" href="~/Author">Manage Authors</a>
+    <a class="a-home" href="~/Book"> Manage Books</a>
 </div>
