@@ -1,0 +1,16 @@
+﻿@* @model LibraryTest.Models.Author*@
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+    @model List<Author>
+@{
+
+    <h2>Lista de Autores</h2>
+
+    <ul>
+        @foreach (var author in Model)
+        {
+            <li>@author.Name</li>
+        }
+    </ul>
+}

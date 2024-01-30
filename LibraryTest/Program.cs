@@ -1,7 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using LibraryTest.DAL;
+
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+builder.Services.AddDbContext<LibraryDatabaseContext>(options =>
+
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DatabaseConection"))
+);
 
 var app = builder.Build();
 
