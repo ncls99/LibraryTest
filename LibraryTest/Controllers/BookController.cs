@@ -65,9 +65,9 @@ namespace LibraryTest.Controllers
             }
             catch
             {
-                ViewData["AuthorId"] = new SelectList(_context.Author, "AuthorId", "Name", book.AuthorId);
-                return View(book);
-            }
+            ViewData["AuthorId"] = new SelectList(_context.Author, "AuthorId", "Name", book.AuthorId);
+            return View(book);
+        }
 
         }
     }

@@ -19,6 +19,12 @@ namespace LibraryTest.Controllers
             return View(_databaseContext.Author.ToList());
         }
 
+        // GET: AuthorController/Details/5
+        //public ActionResult Details(int id)
+        //{
+        //    return View();
+        //}
+
         // GET: AuthorController/Create
         public ActionResult Create()
         {
@@ -38,8 +44,8 @@ namespace LibraryTest.Controllers
             }
             catch
             {
-                return View(author);
-            }
+            return View(author);
         }
     }
+}
 }
