@@ -1,22 +1,33 @@
+using LibraryTest.DAL;
 using LibraryTest.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace LibraryTest.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly LibraryDatabaseContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, LibraryDatabaseContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        public IActionResult Index()
+        // GET: Book
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var libraryDatabaseContext = _context.Book.Include(b => b.Author);
+            return View(await libraryDatabaseContext.ToListAsync());
         }
+
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
         public IActionResult Privacy()
         {
